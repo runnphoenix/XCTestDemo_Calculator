@@ -7,21 +7,23 @@
 //
 
 #import "ViewController.h"
+#import "Calculator.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    Calculator *_calculator;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _calculator = [[Calculator alloc]init];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (double)perimeterOfRectangleWithLength:(double)length andWidth:(double)width {
+    return  [_calculator productOfNumber:2 andNumber:[_calculator sumOfNumber:length andNumber:width]];
 }
 
 @end

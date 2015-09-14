@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (double)perimeterOfRectangleWithLength:(double)length andWidth:(double)width;
 
 @end
 
